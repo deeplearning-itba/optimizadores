@@ -181,6 +181,7 @@ class log_weights(keras.callbacks.Callback):
         self.w10=w10
         self.w02=w02
         self.w20=w20
+        logs = logs or {}
         try:
             logs["lr_decay"]=float(K.get_value(self.model.optimizer.decay))
         except:
